@@ -1,0 +1,144 @@
+@import "./mixins";
+
+// Scrollbar css
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: rgb(68, 221, 255);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5085f6;
+}
+// Scrollbar css
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+
+    user-select: none;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "SFProText", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+button,
+.btn {
+    border: none;
+    cursor: pointer;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0 auto;
+
+    @include tab {
+        padding: 0 20px;
+    }
+
+    @include mb {
+        padding: 0 10px;
+    }
+}
+
+.modal__product-config,
+.modal__product-check {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: Roboto, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #464646;
+
+    .modal__wrapper {
+        margin: 100px auto;
+        max-width: 900px;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 12px;
+
+        .modal__box {
+            width: 100%;
+            pointer-events: auto;
+            background-clip: padding-box;
+            border-radius: 4px;
+            font-size: 14px;
+            position: relative;
+        }
+    }
+}
+
+@each $color, $val in $colors {
+    .color-#{color} {
+        color: $val;
+    }
+
+    .bg-#{color} {
+        background-color: $val;
+    }
+}
+
+@each $val in $numbers {
+    .grid-col-#{$val} {
+        grid-template-columns: repeat($val, 1fr);
+    }
+}
+
+@each $val in $numbers {
+    .grid-col-md-#{$val} {
+        @include tab {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
+}
+
+@each $val in $numbers {
+    .grid-col-sm-#{$val} {
+        @include mb {
+            grid-template-columns: repeat($val, 1fr);
+        }
+    }
+}
+
+.grid {
+    display: grid;
+}

@@ -1,0 +1,52 @@
+.sidebar {
+    // flex: 1;
+    flex-basis: 10%;
+    background-color: rgb(251, 251, 251);
+    height: calc(100vh - 50px);
+    position: sticky;
+    top: 50px;
+
+    &__wrapper {
+        padding: 20px;
+        color: #555;
+        &__menu {
+            margin-bottom: 20px;
+            .menuTitle {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: rgb(158, 158, 158);
+            }
+
+            .menuList {
+                padding: 5px;
+
+                &__item {
+                    padding: 5px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 10px;
+                    margin-bottom: 3px;
+
+                    &:hover {
+                        background-color: rgb(224, 213, 213);
+                        background-color: $main-color;
+                    }
+
+                    &.active {
+                        background-color: $main-color;
+                    }
+
+                    &-icon {
+                        font-size: 1.6rem;
+                    }
+
+                    &-name {
+                        font-size: 1.6rem;
+                        margin-left: 3px;
+                    }
+                }
+            }
+        }
+    }
+}

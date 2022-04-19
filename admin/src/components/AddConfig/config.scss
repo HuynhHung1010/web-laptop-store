@@ -1,0 +1,57 @@
+.config-body {
+    position: relative;
+    padding: 24px 32px;
+
+    .modal-close {
+        position: absolute;
+        right: 24px;
+        top: 10px;
+        color: #ef0000;
+        font-size: 34px;
+        opacity: 0.6;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+
+    .items-title {
+        margin: 20px auto;
+    }
+    .items {
+        @include flex(flex-start, flex-start);
+        flex-wrap: wrap;
+        padding-bottom: 34px;
+        border-bottom: 1px solid $main-color;
+
+        .config-item {
+            width: 50%;
+            label {
+                font-size: 16px;
+                font-weight: 600;
+                width: 300px;
+            }
+
+            input {
+                width: 90%;
+                padding: 4px 8px;
+                margin: 10px 0;
+            }
+        }
+    }
+}
+
+.form-error {
+    background: #ffd3d3;
+    border-radius: 4px;
+    padding: 8px;
+    color: #ff0000;
+    font-weight: 600;
+}
+
+.btn-conf-update {
+    @include btn;
+
+    margin: 12px 0;
+}

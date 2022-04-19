@@ -1,0 +1,36 @@
+.card-body {
+    padding-bottom: 32px;
+    .card-img {
+        text-align: center;
+        margin-bottom: 32px;
+        img {
+            width: 80%;
+        }
+    }
+    .card-row {
+        &-title {
+            padding: 4px 30px;
+            font-weight: 500;
+            background: #f8f9fa;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: calc(100% - 60px);
+            margin: 0 auto;
+
+            td:first-child {
+                color: #99a2aa;
+                width: 200px;
+                padding: 6px 0;
+            }
+            td {
+                color: #495057;
+                padding: 6px 0;
+                vertical-align: baseline;
+            }
+        }
+    }
+}

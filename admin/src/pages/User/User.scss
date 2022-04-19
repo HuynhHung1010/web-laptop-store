@@ -1,0 +1,187 @@
+.user{
+    flex: 4;
+    padding : 20px;
+
+    &__title{
+
+        display: flex;
+        align-items: center;
+        justify-content : space-between;
+
+        &-edit{
+            font-size: 2.6rem;
+            font-weight : 600;
+            color: #333;
+
+        }
+
+        &-create{
+            border: none;
+            padding: 6px 14px;
+            font-size: 1.6rem;
+            border-radius: 10px;
+            background-color: $main-color;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    &__content{
+        margin-top: 20px;
+        display : flex;
+
+        &-show{
+            flex: 1;
+            box-shadow: $box-shadow;
+            padding: 20px;
+
+            .showtop{
+                display : flex;
+                align-items:center;
+                justify-content: flex-start;
+
+                &-img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+
+                &-name{
+                    font-size: 1.6rem;
+                    margin-left: 15px;
+                    color: #333;
+                }
+            }
+
+
+            .showbottom{
+
+                margin-top: 20px;
+
+                &-content{
+
+                    display :flex;
+                    align-items: center;
+                    margin-top: 10px;
+                    &-icon{
+                        font-size:  2rem;
+                    }
+                    &-text{
+                        font-size: 1.6rem;
+                        margin-left: 5px;
+                    }
+                }
+
+
+                
+            }
+        }
+
+        &-update{
+            flex: 2;
+            box-shadow: $box-shadow;
+            padding: 20px;
+            margin-left: 20px;
+
+
+            .updateTitle{
+                font-size: 2.2rem;
+                font-weight : 600;
+            }
+
+            .updateForm{
+                display :flex;
+                justify-content: space-between;
+
+                &__left{
+                    flex: 1;
+
+                    &-item{
+
+                        margin-top: 2rem;
+
+                        .item__label{
+                            cursor: default;
+                            font-size: 1.6rem;
+                            color: #333;
+                            // margin-top: 2rem;
+                        }
+                    }
+                }
+
+
+
+
+                &__right{
+                    flex: 1;
+                    display : flex;
+                    justify-content:center;
+                    align-items:center;
+                    flex-direction: column;
+
+
+                    &-item{
+
+                        display : flex;
+
+
+                        .rightImg{
+                            width: 60px;
+                            height: 60px;
+                            border-radius:50%;
+
+                        }
+
+
+
+                    .choose{
+                            
+                    cursor: default;
+                    margin-left: 10px;
+                    justify-content:flex-start;
+                    position : relative;
+                    top: 10px;
+
+                        .rightFile{
+                            width: 160px;
+                            position: absolute;
+                            opacity: 0;
+                            // cursor:pointer;
+                        }
+
+
+
+                        i{
+                        
+                            // margin-top: 30px;
+                        color: #333;
+                        font-weight: 600;
+                        font-size: 1.6rem;
+                        border: 1px solid #e3e7ef;
+                        border-radius: 56px;
+                        padding: 0 10px;
+                        height: 36px;
+                        line-height: 35px;
+                        // text-align: center;
+                        // display: inline-block;
+                        cursor: pointer;
+                        }
+                        }
+                    }
+
+
+                    .rightUpdate{
+                        font-size: 1.6rem;
+                        padding: 8px 20px;
+                        margin-top : 50%;
+                        color: #fff;
+                        background-color: $main-color;
+                        border-radius: 10px;
+                    }
+
+                }
+            }
+        }
+    }
+
+}

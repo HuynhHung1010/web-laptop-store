@@ -1,0 +1,40 @@
+.catalog{
+    @include flex(flex-start,flex-start);
+    margin-top: calc(#{$header-height} * 2);
+    &__filter{
+        width: 25%;
+        @include tab{
+            width: unset;
+        }
+
+        &__widget{
+            margin-bottom: 2rem;
+
+            &__title{
+                font-size : 2rem;
+                font-family: $font-title;
+                color : $color-title;
+                font-weight : 600;
+                margin-bottom: 1.6rem;
+                @include tab{
+                    font-size: 1.6rem;
+                }
+            }
+
+            &__content{
+                color : #333;
+                
+
+            
+            }
+        }
+    }
+
+    &__content{
+        flex-grow : 1;
+
+        @include tab{
+            width: 100%;
+        }
+    }
+}

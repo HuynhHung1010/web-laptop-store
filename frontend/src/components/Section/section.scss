@@ -1,0 +1,25 @@
+.section{
+
+    margin-bottom: 80px;
+
+    // & > * ~ * {
+    //     margin-top: 40px;
+    // }
+
+   &__title {
+       font-family: $font-title;
+       font-size : 2.6rem;
+       font-weight: 700;
+       color : #0e0e0e;
+       margin-bottom: 20px;
+       line-height: 1;  //cho box vừa ôm text
+
+       @include mb{
+           font-size : 20px;
+       }
+   }
+
+}
+
+
+

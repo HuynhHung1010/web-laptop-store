@@ -1,0 +1,166 @@
+.cart {
+    min-height: 65vh;
+    padding-top: 100px;
+
+    h1 {
+        font-size: 32px;
+    }
+    &-content {
+        @include flex(flex-start, space-between);
+        margin: 20px 0 50px;
+        .cart-items {
+            flex: 1;
+            margin-right: 10px;
+            width: 75%;
+            border-radius: 12px;
+            border: 1px solid $main-color;
+
+            .cart-item {
+                @include flex(flex-start, flex-start);
+                padding: 1rem;
+                border-bottom: 1px solid $main-color;
+
+                &-img {
+                    width: 140px;
+                    height: 100px;
+                    margin-right: 15px;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                &-info {
+                    flex: 1;
+
+                    &-name {
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        font-size: 14px;
+                        padding: 0.5rem 0;
+                    }
+                    .btn-del {
+                        display: inline-block;
+                        i {
+                            padding-right: 4px;
+                        }
+                        color: #cb1c22;
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+
+                &-quantity {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 0 10px;
+
+                    p {
+                        text-align: center;
+                        width: 35px;
+                    }
+                    .btn-minus,
+                    .btn-minus-active,
+                    .btn-plus {
+                        padding: 4px 8px;
+                        align-items: center;
+                        justify-content: center;
+                        border: solid 1px $main-color;
+                        border-radius: 50%;
+                        font-size: 16px;
+
+                        &:hover {
+                            background-color: rgb(233, 233, 233);
+                        }
+                    }
+                    .btn-minus-active {
+                        background-color: rgb(233, 233, 233);
+                        cursor: default;
+                    }
+                }
+
+                &-price {
+                    width: 150px;
+                    text-align: right;
+                    padding: 4px 8px;
+                    font-size: 20px;
+                    color: #cb1c22;
+                    font-weight: 600;
+                }
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .cart-total {
+            width: 325px;
+            text-align: right;
+            padding: 1rem;
+            border: 1px solid #cfd0d1;
+            border-radius: 12px;
+
+            &-price,
+            &-pricenomal {
+                @include flex(center, space-between);
+                padding: 16px 0;
+            }
+
+            &-pricenomal {
+                font-size: 20px;
+            }
+            &-price {
+                font-weight: bold;
+                font-size: 24px;
+                color: #cb1c22;
+            }
+            .btn-checkout {
+                @include btn;
+                border-radius: 32px;
+                text-align: center;
+                font-size: 20px;
+
+                padding: 20px 12px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+        }
+    }
+    @include mb {
+        &-content {
+            flex-direction: column;
+            .cart-items {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .cart-total {
+                width: 100%;
+            }
+        }
+    }
+
+    .cart-empty {
+        width: 100%;
+        text-align: center;
+        img {
+            width: 350px;
+        }
+
+        i {
+            font-size: 16px;
+        }
+        .btn-cont {
+            @include btn;
+            width: 250px;
+            padding: 12px 14px;
+
+            font-weight: 600;
+            font-size: 2rem;
+            margin: 20px auto;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+.footer {
+    background-color: #114ba1;
+    color: #fff;
+    width: 100%;
+    padding-top: 45px;
+    font-size: 12px;
+
+    &__top {
+        @include flex(center, space-between);
+        font-size: 15px;
+        padding-bottom: 20px;
+
+        &-logo {
+            padding: 0 8px;
+
+            img {
+                width: 314px;
+                height: 95;
+            }
+
+            @include tab {
+                img {
+                    width: 200px;
+                    height: 95;
+                }
+            }
+        }
+
+        &-right {
+            @include flex(center, space-between);
+
+            width: 300px;
+
+            &-hotline {
+                i {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            &-media {
+                @include flex(center, unset);
+
+                &-icon {
+                    width: 30px;
+                    height: 30px;
+                    padding: 0 4px;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        @include flex(normal, left);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+        flex-wrap: wrap;
+
+        &-items {
+            width: 25%;
+
+            &-title {
+                font-weight: 600;
+                padding-bottom: 10px;
+                font-size: 16px;
+            }
+
+            &-list {
+                margin-bottom: 20px;
+                &-item {
+                    width: 100%;
+                    font-size: 15px;
+
+                    font-weight: 400;
+                    padding: 4px 8px;
+                    color: rgba(255, 255, 255, 0.5);
+                }
+                :hover {
+                    color: aqua;
+                }
+            }
+        }
+
+        @include mb {
+            &-items {
+                width: 50%;
+            }
+        }
+    }
+
+    &__bottom {
+        padding: 8px 0;
+        text-align: center;
+        background-color: #334e85;
+
+        &-content {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 10px;
+
+            &-checkedweb {
+                padding: 8px 0;
+
+                img {
+                    width: 200px;
+                }
+            }
+
+            &-info {
+                margin-top: 10px;
+                padding: 4px 8px;
+
+                p {
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        &-coppyright {
+            padding: 8px 0;
+            display: inline-block;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    @include mb {
+        &__top {
+            display: block;
+
+            &-right {
+                width: 100%;
+                padding: 20px 12px;
+            }
+        }
+    }
+}

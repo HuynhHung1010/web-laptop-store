@@ -1,0 +1,40 @@
+.featured{
+    width: 100%;
+    display : flex;
+    justify-content: space-between;
+
+    &__item{
+        flex: 1;
+        margin: 0px 20px;
+        padding: 30px;
+        border-radius : 10px;
+        cursor: pointer;
+        box-shadow: $box-shadow;
+        display : flex;
+        align-items: center;
+        justify-content: space-around; 
+        i{
+            font-size: 4rem;
+        }
+
+        &-content{
+
+            margin: 10px 0px;
+
+            &-title{
+                font-size: 2rem;
+            }
+
+            &-money{
+                font-size: 3rem;
+                font-weight : 600;
+                display : block;
+            }
+
+        }
+
+        
+
+        
+    }
+}

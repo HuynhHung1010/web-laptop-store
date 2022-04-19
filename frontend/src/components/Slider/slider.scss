@@ -1,0 +1,207 @@
+.slider {
+    height: calc(100vh - #{$header-height});
+    max-height: 1080px;
+    overflow: hidden;
+    position: relative;
+    margin-top: calc(#{$header-height} * 1);
+    margin-bottom: $header-height;
+
+    @include tab {
+        margin-top: calc(#{$header-height} * 1);
+        height: calc(50vh - #{$header-height});
+    }
+
+    @include mb {
+        margin-top: calc(#{$header-height} * 1);
+        height: calc(40vh - #{$header-height});
+    }
+
+    &__item {
+        @include flex(center, space-between);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+
+        @include tab{
+            // flex-direction: column-reverse;  
+            
+        }
+
+        @include mb{
+
+        }
+
+        //set cho backgroundImage
+        transform : scale(0) rotate(10deg);
+        transition: transform 0.5s cubic-bezier(0.2,0.6,0.3,0.5);
+        
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: visible;
+
+            //transition cho backgroundImage
+            transform: scale(1) rotate(0);
+
+        }
+
+        &__info{
+            width: 58,33%;
+            position : absolute;
+
+            @include tab{
+                width: 30%;
+                transform: translateY(-50%);
+            }
+
+            @include mb{
+                transform: translateY(-50%);
+            }
+
+            &__title{
+                margin-bottom:2.5rem;
+                font-family: "M PLUS Rounded 1c", sans-serif;
+                font-weight: 600;
+                font-size: 6rem; // 
+                line-height: 6.75rem; // khoảng cách dòng
+                overflow: hidden; // phần dư bị ẩn
+
+                @include tab{
+                    margin-bottom: 2rem;
+                    font-size: 5rem;
+                }
+
+                @include mb{
+                    position: relative;
+                    top: 40px;
+                    font-size: 2.5rem;
+                   
+                }
+            }
+
+
+            &__btn{
+
+                $btn-height : 5rem;
+                overflow : hidden; 
+                height: $btn-height;
+           
+                
+
+                button{
+                    padding: 8px 14px;
+                    border:none;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 30px;
+
+                    background-color: $main-color;
+                    height: 100%;
+
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    color: #fff;
+                    // font-family: $main-font;
+
+                    @include flex(center,center);
+
+                    &:hover {
+                        color: $btn-hover;
+                    }
+
+                    @include tab{
+                       padding: 4px 8px;
+                       font-size : 2rem;
+                    }
+
+                    @include mb{
+                        height: 50%;
+                        padding : 2px 4px;
+                        font-size: 1.2rem;
+                        
+                    }
+
+                   
+                }
+            }
+
+            &__btn{
+                overflow: hidden;
+            }
+
+            //do set background bị dính hết
+            // &__title > span, &__btn button {
+            //     display : block;
+            //     nằm ẩn ở bên trái
+            //     transform: translateX(-100%);
+            //     transition: transform 0.5s ease;
+            // }
+
+        }
+
+        // &.active &__info{
+        //     &__title > span, &__btn button {
+        //          Ẩn từ bên trái đẩy vào
+        //         transform: translateX(0);
+                
+        //     }
+        // }
+
+        
+    }
+
+    
+
+    &__control{
+        @include flex(center,center);
+
+        position : absolute;
+        bottom: 1rem;
+        left: 50%;
+        //dịch qua bên trái phân nữa cửa chính nó
+        transform: translateX(-50%);
+
+        @include tab{
+            bottom: 0px;
+        }
+
+        @include mb{
+            bottom: 0px;
+        }
+        
+
+        &__item ~ &__item{
+            margin-left : 10px;
+        }
+
+        &__item{
+
+            @include flex(center,center);
+            // font-size: 4rem;
+            cursor: pointer;
+
+            &.btn-slide{
+                padding: 4px;
+                border-radius : 50%;
+                &:hover{
+                    background-color: $main-color;
+                }
+            }
+
+
+            .index{
+                font-size : 2rem;
+                font-family: $main-font;
+                cursor:default;
+                
+            }
+        }
+
+       
+    }
+
+
+}

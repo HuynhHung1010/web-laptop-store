@@ -1,0 +1,54 @@
+.order {
+    flex: 4;
+
+    .detail-order {
+        background: #09bed6;
+        padding: 4px;
+        color: #fff;
+        border-radius: 6px;
+        font-size: 15px;
+    }
+
+    .del-order {
+        color: #e65c5c;
+        font-size: 18px;
+        padding: 4px;
+        margin-left: 10px;
+    }
+}
+
+.item-pending,
+.item-home,
+.item-store,
+.item-transport,
+.item-receved,
+.item-cancle {
+    @include btn;
+
+    line-height: 1.5;
+    display: inline-block;
+    padding: 4px;
+    font-size: 14px;
+    color: #fff;
+
+    border-radius: 8px;
+}
+
+.item-pending {
+    background: #f5b318;
+}
+.item-transport {
+    background: #c59512;
+}
+.item-receved {
+    background: green;
+}
+.item-cancle {
+    background: #d40a25;
+}
+.item-home {
+    background: #0fee0f;
+}
+.item-store {
+    background: #1768ff;
+}

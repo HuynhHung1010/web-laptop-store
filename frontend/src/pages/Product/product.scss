@@ -1,0 +1,387 @@
+.product {
+    margin-top: 72px;
+    padding: 40px 10px;
+    font-size: 16px;
+
+    &__detail {
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid #e3e7ef;
+
+        &-top {
+            @include flex(flex-start, space-between);
+            padding: 10px 0 15px;
+            margin: 0 0 16px;
+            border-bottom: 1px solid #e3e7ef;
+
+            &-name {
+                font-size: 24px;
+                font-weight: bold;
+
+                span {
+                    font-size: 12px;
+                    padding: 0 8px;
+                    font-weight: 400;
+                    opacity: 0.8;
+                }
+            }
+
+            &-ratting {
+                @include flex(center, flex-end);
+                min-width: 236px;
+
+                &-star {
+                    padding: 4px 8px;
+                    color: rgb(255, 187, 0);
+                }
+                &-number {
+                    padding: 4px 8px;
+                    color: blue;
+                }
+            }
+        }
+
+        &-content {
+            @include flex(flex-start, flex-end);
+
+            &-left {
+                position: relative;
+                width: 50%;
+                &-img {
+                    padding: 20px 0;
+                    margin: 20px 0 32px;
+                    overflow: hidden;
+
+                    img {
+                        border-radius: 4px;
+                        width: 100%;
+                    }
+                }
+
+                &-config {
+                    padding: 15px 20px;
+                    border-radius: 8px;
+                    margin-bottom: 12px;
+                    color: #495075;
+                    font-size: 14px;
+
+                    background-color: #f8f9fa;
+                    border: solid 1px #e9ecef;
+
+                    li {
+                        @include flex(flex-start, flex-start);
+
+                        p {
+                            padding: 2px 4px;
+                            line-height: 1.7;
+                        }
+                    }
+                    .config-detail-modal {
+                        color: #0168fa;
+                    }
+                    a {
+                        color: #0168fa;
+                        padding: 2px 4px;
+                    }
+                    .config-detail-modal:hover,
+                    a:hover {
+                        color: #0ee9ff;
+                    }
+                }
+            }
+
+            &-right {
+                width: 50%;
+                margin-left: 32px;
+
+                &-price {
+                    color: #cb1c22;
+                    font-size: 32px;
+                    line-height: 40px;
+                    margin-bottom: 16px;
+                    font-weight: bold;
+                }
+
+                &-uudai {
+                    padding: 15px 20px;
+                    border-radius: 8px;
+                    margin-bottom: 12px;
+                    color: #444b52;
+
+                    font-size: 14px;
+                    background-color: #f8f9fa;
+                    border: solid 1px #e9ecef;
+
+                    p {
+                        @include flex(flex-start, flex-start);
+                        line-height: 1.5;
+                    }
+                }
+
+                &-uudaithanhtoan,
+                &-paygop {
+                    @include flex(flex-start, space-between);
+
+                    margin-top: 10px;
+                    div {
+                        width: calc((100% / 2) - 3px);
+                        padding: 8px 12px;
+                        border: solid 1px #e0e0e0;
+                        border-radius: 4px;
+                        position: relative;
+                        line-height: 1.5;
+
+                        a {
+                            color: #ee0c13;
+                        }
+                        p {
+                            font-size: 12px;
+                        }
+                        img {
+                            height: 15px;
+                        }
+                    }
+                }
+                &-pay {
+                    @include flex(flex-start, space-between);
+                    .btn-muangay,
+                    .btn-addtocart {
+                        @include btn;
+                        margin-top: 10px;
+                        padding: 12px 8px;
+
+                        border-radius: 4px;
+                        font-weight: bold;
+                    }
+
+                    .btn-muangay {
+                        flex: 1;
+                        margin-right: 8px;
+                        width: 30%;
+                        background-color: #ee0c13;
+                        color: #fff;
+                    }
+
+                    .btn-addtocart {
+                        flex: 2;
+                        width: 70%;
+                        background-color: $main-color;
+                    }
+                }
+
+                &-paygop {
+                    div {
+                        background-color: #46a8f9;
+                        color: #fff;
+                        text-align: center;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .numbers {
+        margin-left: 10px;
+        padding: 4px;
+        border-radius: 4px;
+        color: #fff;
+        background-color: #92c100;
+        height: 25px;
+    }
+
+    &__tongquan {
+        padding-bottom: 46px;
+        border-bottom: 1px solid #e3e7ef;
+        width: 80%;
+        margin: 0 auto;
+
+        p {
+            padding: 20px 0;
+            text-align: justify;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        img {
+            border-radius: 4px;
+            width: 100%;
+        }
+    }
+
+    &__box-vote {
+        width: 80%;
+        margin: 32px auto;
+        font-size: 14px;
+
+        margin-bottom: 16px;
+
+        .box-vote-head {
+            @include flex(flex-start, space-between);
+
+            &-left {
+                h1 {
+                    font-size: 32px;
+                    padding-bottom: 20px;
+                }
+                .vote-title {
+                    display: flex;
+                }
+                .vote-tb {
+                    text-align: center;
+                    .vote {
+                        .star-number {
+                            font-size: 38px;
+                            font-weight: bold;
+                        }
+
+                        .star {
+                            padding: 4px 8px;
+                        }
+                    }
+                }
+            }
+
+            .btn-vote {
+                @include btn;
+                padding: 12px 20px;
+                border-radius: 20px;
+            }
+        }
+
+        &-list {
+            margin-top: 20px;
+            line-height: 1.5;
+            .item {
+                @include flex(center, flex-start);
+                margin-bottom: 32px;
+                border-bottom: 1px solid #e3e7ef;
+
+                &-logo {
+                    justify-content: center;
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 15px;
+                    img {
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &-detail {
+                    margin-bottom: 10px;
+
+                    .item-name {
+                        font-size: 18px;
+                        i {
+                            margin-left: 8px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__comment {
+        width: 80%;
+        margin: 32px auto;
+
+        &-top {
+            margin-bottom: 32px;
+            &-head {
+                @include flex(flex-start, flex-start);
+                margin-bottom: 20px;
+            }
+            &-write {
+                position: relative;
+                textarea {
+                    background: #f3f5f8;
+                    height: 80px;
+                    padding: 16px;
+                    padding-right: 70px;
+                    width: 100%;
+                    border: 1px solid #f3f5f8;
+                    border-radius: 4px;
+                    resize: none;
+                    outline: 1px solid $main-color;
+                }
+
+                button {
+                    @include btn;
+                    position: absolute;
+                    bottom: 20px;
+                    right: 16px;
+                }
+            }
+        }
+        &-list {
+            .comment {
+                @include flex(flex-start, flex-start);
+                margin-bottom: 32px;
+                width: 100%;
+                font-size: 13px;
+
+                &-detail {
+                    flex: 1;
+                    margin-left: 15px;
+                    padding-bottom: 16px;
+                    border-bottom: 1px solid #e3e7ef;
+                    font-size: 16px;
+
+                    .item-name {
+                        padding-bottom: 8px;
+                        i {
+                            margin-left: 8px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .comment-logo {
+                    width: 50px;
+                    height: 50px;
+
+                    img {
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mb {
+    .product {
+        width: 100%;
+        padding: 0;
+
+        &__tongquan,
+        &__comment,
+        &__box-vote {
+            width: 100%;
+        }
+    }
+
+    .product__detail-top,
+    .product__detail-content {
+        flex-direction: column;
+
+        &-left,
+        &-right {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+@include tab {
+    .product__detail-content-right-paygop {
+        flex-direction: column;
+        div {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+}
